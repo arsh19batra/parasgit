@@ -1,0 +1,34 @@
+﻿@page
+@model LearningRazorCart.Pages.IndexModel
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" /> 
+    <title>Shopping Cart</title>
+
+</head>
+<body>
+    <h3>Cart Items</h3>
+    <table border="1">
+        <tr>
+            <th>Product_Id</th>
+            <th>Product_Name</th>
+            <th>ListPrice</th>
+            <th>Gender</th>
+            <th>Category</th>
+        </tr>
+        @foreach (var product in Model.Products)
+        {
+            <tr align="center">
+                <td>@product.ProductId</td>
+                <td>@product.ProductName</td>
+                <td>@product.ListPrice</td>
+                <td>@product.GenderId</td>
+                <td>@product.CategoryId</td>
+                <td>
+                    <a asp-page="cart" asp-page-handler="buynow" asp-route-id="@product.ProductId">Add To Cart</a>
+                </td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

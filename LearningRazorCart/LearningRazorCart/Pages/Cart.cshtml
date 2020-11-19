@@ -1,0 +1,69 @@
+﻿@page
+@model LearningRazorCart.Pages.CartModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style>
+        .blank_row {
+            height: 10px !important;
+            background-color: #FFFFFF;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cart</title>
+</head>
+<body>
+
+    <h3>Cart</h3>
+    <form method="post" asp-page="cart" asp-page-handler="update">
+        <table border="1">
+            <tr>
+                <th>Remove</th>
+                <th>Product_id</th>
+                <th>Product name</th>
+                <th>Price</th>
+                <th>Gender_Id</th>
+                <th>Category_Id</th>
+                <th>Quantity <input type="submit" value="Update" /></th>
+                <th>Sub Total</th>
+            </tr>
+            @foreach (var item in Model.Cart)
+            {
+                <tr align="center">
+                    <td align="center">
+                        <a asp-page="cart" asp-page-handler="delete" asp-route-id="@item.Product.ProductId">X</a>
+                    </td>
+
+                    <td>@item.Product.ProductId</td>
+                    <td>@item.Product.ProductName</td>
+                    <td>@item.Product.ListPrice</td>
+                    <td>@item.Product.GenderId</td>
+                    <td>@item.Product.CategoryId</td>
+
+                    <td><input type="number" name="quantities" value="@item.Quantity" min="1" style="width: 50px;" /></td>
+                    <td>
+                        $@(item.Product.ListPrice * item.Quantity)
+                    </td>
+                </tr>
+            }
+
+            <tr class="blank_row">
+
+                <td colspan="6" align="right">Total</td>
+                <td align="center">$@Model.Total</td>
+            </tr>
+        </table>
+    </form>
+    <div style="text-align:left">
+            <a asp-page="index">Continue Shopping</a>
+    </div>
+    <div style="text-align:center">
+            <input type="submit" value="Check Out" />
+    </div>
+</body>
+</html>
