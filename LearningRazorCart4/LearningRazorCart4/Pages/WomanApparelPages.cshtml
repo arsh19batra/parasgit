@@ -1,0 +1,30 @@
+﻿@page
+@model LearningRazorCart4.Pages.WomanApparelPagesModel
+@{
+    ViewData["Title"] = "Woman Apparel";
+}
+<div class="text-center">
+    <h1 class="display-4">Wardrobe For Women</h1><br /><br />
+
+    <table class=" table">
+        <thead>
+            <tr>
+                <th>Product_Id</th>
+                <th>Product_Name</th>
+                <th>ListPrice</th>
+
+            </tr>
+            @foreach (var woman in Model.womenProducts)
+            {
+                <tr align="center">
+                    <td>@woman.ProductId</td>
+                    <td>@woman.ProductName</td>
+                    <td>@woman.ListPrice</td>
+                    <td>
+                        <a asp-page="cart" asp-page-handler="buynow" asp-route-id="@woman.ProductId">Add To Cart</a>
+                    </td>
+                </tr>
+            }
+    </table>
+</div>
+

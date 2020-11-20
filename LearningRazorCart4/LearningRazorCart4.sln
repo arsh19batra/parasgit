@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningRazorCart4", "LearningRazorCart4\LearningRazorCart4.csproj", "{BA82EB8E-6E98-467D-BFB1-1F791935A1CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA82EB8E-6E98-467D-BFB1-1F791935A1CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA82EB8E-6E98-467D-BFB1-1F791935A1CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA82EB8E-6E98-467D-BFB1-1F791935A1CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA82EB8E-6E98-467D-BFB1-1F791935A1CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {36269C74-DB79-427B-8C7E-43197364BB99}
+	EndGlobalSection
+EndGlobal

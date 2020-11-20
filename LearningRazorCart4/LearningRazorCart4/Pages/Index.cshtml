@@ -1,0 +1,33 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Online Store</h1><br /><br />
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th><a asp-page="ManApparelPages">Wardrobe For Men</a></th>
+                <th><a asp-page="KidApparelPages">Wardrobe For Kids</a></th>
+                <th><a asp-page="WomanApparelPages">Wardrobe For Women</a></th>
+            </tr>
+        </thead>
+    </table>
+    <img border="0" alt="AllThree" src="~/images/cartoon-character-elements-png_227247.jpg" style="margin-left:auto ;margin-right:auto;display:block">
+</div>
+<div style="position: absolute; top: 8px; right: 16px; font-size: 18px;">
+    <a href="http://www.freewebsitetemplates.com">Cart</a> | <a href="http://www.freewebsitetemplates.com">Login</a>
+</div>
+<div id="footer">
+    <div id="tips">
+        <br />
+        <br /><br />
+        <h2><strong>Fashion Quote Of The Day</strong></h2><br />
+        <i>"Fashion is part of the daily air and it changes all the time, with all the events. You can even see the approaching of a revolution in clothes. You can see and feel everything in clothes." </i>
+        <div class="text-right"><i><br />—Diana Vreeland</i></div>
+
+    </div>
+</div>

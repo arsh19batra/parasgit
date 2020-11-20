@@ -1,0 +1,44 @@
+﻿@page
+@model LearningRazorCart4.Pages.CartModel
+@{
+
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style>
+        .blank_row {
+            height: 10px !important;
+            background-color: #FFFFFF;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cart</title>
+</head>
+<body>
+
+    <h3>Cart</h3>
+    <form method="post" asp-page="cart" asp-page-handler="update">
+        <table border="1">
+            <tr>
+                <th>Remove</th>
+                <th>Product_id</th>
+                <th>Product name</th>
+                <th>Price</th>
+                <th>Gender_Id</th>
+                <th>Category_Id</th>
+                <th>Quantity <input type="submit" value="Update" /></th>
+                <th>Sub Total</th>
+            </tr>
+           
+        </table>
+    </form>
+    <div style="text-align:left">
+        <a asp-page="index">Continue Shopping</a>
+    </div>
+    <div style="text-align:center">
+        <input type="submit" value="Check Out" />
+    </div>
+</body>
+</html>
