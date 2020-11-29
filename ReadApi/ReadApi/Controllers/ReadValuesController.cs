@@ -37,6 +37,21 @@ namespace ReadApi.Controllers
             var result = await Task.FromResult(_readService.GetAll<Product>($"Select * from [production].[products] where gender_id={num}", null, commandType: CommandType.Text));
             return result;
         }
+        [HttpGet]
+        [Route("order/{id}")]
+        public async Task<Product> GetOrderById(int Id)
+        {
+            var result = await Task.FromResult(_readService.Get<Product>($"Select * from [sales].[order_items] where product_id = {Id}", null, commandType: CommandType.Text));
+            return result;
+        }
+
+        [HttpGet]
+        [Route("apiorder")]
+        public async Task<List<Product>> GetAllOrders()
+        {
+            var result = await Task.FromResult(_readService.GetAll<Product>($"Select * from [sales].[order_items] ", null, commandType: CommandType.Text));
+            return result;
+        }
     }
 }
 

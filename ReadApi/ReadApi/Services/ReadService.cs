@@ -22,7 +22,7 @@ namespace ReadApi.Services
         {
 
         }
-                public T Get<T>(string sp, DynamicParameters parms, CommandType commandType = CommandType.StoredProcedure)
+        public T Get<T>(string sp, DynamicParameters parms, CommandType commandType = CommandType.StoredProcedure)
         {
             using IDbConnection db = new SqlConnection(_config.GetConnectionString(Connectionstring));
             return db.Query<T>(sp, parms, commandType: commandType).FirstOrDefault();
